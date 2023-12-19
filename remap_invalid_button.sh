@@ -1,5 +1,6 @@
-CONTROLLER1_LOCATION=/dev/input/by-id/usb-SIMFEEL_SIMFEEL_PEDAL_102009010005-event-if00 #change to controller in question
-CONTROLLER1_EVENT_PORT=event3 # enter coresponding event-port
+#!/bin/bash
+CONTROLLER1_LOCATION=/dev/input/by-id/usb-POLSIMER_Wheel_Leds_6384800-if04-event-joystick #change to controller in question
+CONTROLLER1_EVENT_PORT=event4 # enter coresponding event-port
 BTN=BTN_TRIGGER_HAPPY4 # where to remap key
 
 sudo /bin/evtest $CONTROLLER1_LOCATION EV_KEY 300 \
