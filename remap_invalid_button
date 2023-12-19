@@ -1,0 +1,9 @@
+CONTROLLER1_LOCATION=/dev/input/by-id/usb-SIMFEEL_SIMFEEL_PEDAL_102009010005-event-if00 #change to controller in question
+CONTROLLER1_EVENT_PORT=event3 # enter coresponding event-port
+BTN=BTN_TRIGGER_HAPPY4 # where to remap key
+
+sudo /bin/evtest $CONTROLLER1_LOCATION EV_KEY 300 \
+        | grep "300.*value" --line-buffered \
+        | grep --line-buffered -o "[01]$" \
+        | while read x ; do sudo evemu-event /dev/input/$CONTROLLER1_EVENT_PORT --type EV_KEY --code $BTN --value $x ; done
+
