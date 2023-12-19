@@ -1,3 +1,5 @@
+### code was snagged from this post https://stackoverflow.com/questions/74565068/mapping-device-input-event-codes-to-new-event-codes
+
 #!/bin/bash
 CONTROLLER1_LOCATION=/dev/input/by-id/usb-POLSIMER_Wheel_Leds_6384800-if04-event-joystick #change to controller in question
 CONTROLLER1_EVENT_PORT=event4 # enter coresponding event-port
